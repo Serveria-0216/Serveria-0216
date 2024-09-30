@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin S. Calibo - Portfolio</title>
+    <link rel="stylesheet" href="stylesProjectsPage.css">
+</head>
+<div class="background-animation"></div>
+<nav>
+    <ul>
+        <li><a href="main.html">Introduction</a></li>
+        <li><a href="aboutPage.html">About Me</a></li>
+        <li><a href="resumePage.html">Resume/CV</a></li>
+        <li><a href="workPage.html">Work Showcase</a></li>
+        <li><a href="certificatesPage.html">Certificates</a></li>
+        <li><a href="contactsPage.html">Contact</a></li>
+        <li><a href="projectsPage.html">Personal Projects</a></li>
+    </ul>
+</nav>
+
+ <section id="projects">
+            <h2>Personal Projects</h2>
+
+            <div class="project">
+                <h3>Social Media Application with Real-time Features</h3>
+                <p><strong>Description:</strong> Create a social media application similar to Twitter or Instagram, with features like user profiles, posts, comments, likes, follows, and notifications. Includes real-time updates using WebSockets for instant notifications and chat functionalities.</p>
+                <p><strong>Technologies:</strong> JavaFX or Spring Boot, WebSocket, Hibernate/JPA, MySQL, Redis, and Elasticsearch.</p>
+                <p><strong>Complexity:</strong> Involves complex database design, real-time communication, security, and scalability challenges.</p>
+            </div>
+
+            <div class="project">
+                <h3>Inventory Management System with Predictive Analytics</h3>
+                <p><strong>Description:</strong> Create an advanced inventory management system that helps businesses track stock levels, orders, sales, and deliveries. Integrate predictive analytics to forecast demand and automate restocking processes based on historical data trends and machine learning models.</p>
+                <p><strong>Technologies:</strong> Java, Spring Boot, Hibernate/JPA, MySQL/PostgreSQL, REST APIs, Apache Kafka, and machine learning libraries like Weka or Scikit-learn.</p>
+                <p><strong>Complexity:</strong> Involves designing complex data models, implementing CRUD operations, handling large datasets, integrating ML models, and managing real-time data flow.</p>
+            </div>
+
+            <div class="project">
+               <h3>RPG open world game</h3>
+               <p><strong> Unity</strong> i created a game called i called united dreams, an open world rpg game where you can explore an imaginary world and let the world lead you to your fate which could lead to good or bad depending on your actions \ can lead to psychological emotional impact \</p>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const sections = document.querySelectorAll("section");
+                
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("fade-in");
+                                entry.target.classList.remove("fade-out");
+                            } else {
+                                entry.target.classList.add("fade-out");
+                                entry.target.classList.remove("fade-in");
+                            }
+                        });
+                    }, {
+                        threshold: 0.1 
+                    });
+                
+                    sections.forEach(section => {
+                        observer.observe(section);
+                    });
+                });
+                </script>

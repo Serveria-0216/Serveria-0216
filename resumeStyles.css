@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #000;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    animation: moveBackground 15s infinite linear;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 0; }
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.05);
+}
+/* Existing styles omitted for brevity */
+
+.project {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 3px solid #fff;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.project p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+body {
+    background-color: #001f3f;
+}
+
+.background-animation::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: rgba(255, 255, 255, 0.05);
+    animation: moveWaves 10s linear infinite;
+}
+
+@keyframes moveWaves {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 128, 0.6), rgba(0, 0, 64, 0.3));
+    background-size: 400% 400%;
+    animation: waveAnimation 20s ease infinite;
+    z-index: -1;
+}
+
+@keyframes waveAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(0, 0, 128, 0.7), rgba(0, 0, 64, 0.7), rgba(0, 0, 128, 0.7), rgba(0, 0, 64, 0.7));
+    background-size: 400% 400%;
+    animation: waveVisible 10s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes waveVisible {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}

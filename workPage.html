@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin S. Calibo - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head><div class="background-animation"></div>
+<nav>
+    <ul>
+        <li><a href="main.html">Introduction</a></li>
+        <li><a href="aboutPage.html">About Me</a></li>
+        <li><a href="resumePage.html">Resume/CV</a></li>
+        <li><a href="workPage.html">Work Showcase</a></li>
+        <li><a href="certificatesPage.html">Certificates</a></li>
+        <li><a href="contactsPage.html">Contact</a></li>
+        <li><a href="projectsPage.html">Personal Projects</a></li>
+    </ul>
+</nav>
+
+<section id="work">
+    <h2>Work</h2>
+    <a href="https://www.facebook.com/LeyritanaPrintingPress"> facebook like to leyritana </a>
+    <P></P>
+    <p1>during my work immerstion during grade 12, i made a website for the printing press leyritana</p1>
+
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section");
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("fade-in");
+                    entry.target.classList.remove("fade-out");
+                } else {
+                    entry.target.classList.add("fade-out");
+                    entry.target.classList.remove("fade-in");
+                }
+            });
+        }, {
+            threshold: 0.1 
+        });
+    
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+    </script>
